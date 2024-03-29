@@ -31,7 +31,7 @@ def print_tables():
     global tables
     print("\nTables:")
     if len(tables) == 0:
-        print("No tables found")
+        print("沒有表格在tables中\n推薦使用11. read and load 將表格加入tables中\n")
         return
     
     for table_name in tables:
@@ -76,6 +76,7 @@ def print_options():
     print("* 8. print all tables")
     print("* 9. print a table")   
     print("*10. delete a table")
+    print("*11. read and load table")
     print("**************************\n")
 
 
@@ -118,6 +119,13 @@ def left_join_tables(table1, table2):
             result.append(row1.to_dict())
     new_table = pd.DataFrame(result)
     return new_table
+
+def read_and_load_table():
+    students = read_table(students_file)
+    majors = read_table(majors_file)
+    load_table('students', students)
+    load_table('majors', majors)
+
 
 # instruction function
 def select(table, condition):
@@ -297,20 +305,19 @@ def run_menu(students, majors):
                 del tables[table_name]
             else:
                 print(f"Table {table_name} not found")
+        elif choice == '11':
+            read_and_load_table()
         else:
             print("Invalid choice. Please try again.")
 
 
 
 def main():
-    students = read_table(students_file)
-    majors = read_table(majors_file)
-    load_table('students', students)
-    load_table('majors', majors)
-
+    # 讀取表格文件
+    read_and_load_table()
 
     # 這裡先印出來給使用者看看，以便後續的操作
-    if students is not None and majors is not None:
+    if len(tables) > 0:
         print_tables()
     else:
         print("Error : please give input tables")
