@@ -1,0 +1,4 @@
+student_id,name,major_name
+1,John Smith,Computer Science
+2,Jane Doe,Business Administration
+3,Emily Davis,Mathematics
