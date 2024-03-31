@@ -237,6 +237,8 @@ def run_menu(students, majors):
             if new_table is not None:
                 # 將結果存入tables
                 load_table(retsult, new_table)
+                # 印出result
+                print_table(retsult)
         elif choice == '2':
             # project
             # 輸入要保留的欄位，然後選擇表格
@@ -248,6 +250,8 @@ def run_menu(students, majors):
             if new_table is not None:
                 # 將結果存入tables
                 load_table(retsult, new_table)
+                # 印出result
+                print_table(retsult)
         elif choice == '3':
             # rename
             # 輸入要重命名的table 跟新的名字
@@ -255,6 +259,8 @@ def run_menu(students, majors):
             new_table = input("Enter the new name for the table: ")
             if old_table in tables:
                 tables[new_table] = tables[old_table]
+                # 印出result
+                print_table(new_table)
         elif choice == '4':
             # cartesian product
             # 輸入兩個表格，然後執行cartesian product
@@ -265,6 +271,8 @@ def run_menu(students, majors):
             if new_table is not None:
                 # 將結果存入tables
                 load_table(retsult, new_table)
+                # 印出result
+                print_table(retsult)
         elif choice == '5':
             # print("You selected 'union'")
             # 輸入兩個表格，然後執行union
@@ -275,6 +283,8 @@ def run_menu(students, majors):
             if new_table is not None:
                 # 將結果存入tables
                 load_table(retsult, new_table)
+                # 印出result
+                print_table(retsult)
         elif choice == '6':
             # print("You selected 'difference'")
             # 輸入兩個表格，然後執行difference
@@ -285,6 +295,8 @@ def run_menu(students, majors):
             if new_table is not None:
                 # 將結果存入tables
                 load_table(retsult, new_table)
+                # 印出result
+                print_table(retsult)
         elif choice == '7':
             # print("You selected 'Set Intersection'")
             table1 = input("Enter the first table for the intersection (e.g., studentNo1): ")
@@ -294,6 +306,8 @@ def run_menu(students, majors):
             if new_table is not None:
                 # 將結果存入tables
                 load_table(retsult, new_table)
+                # 印出result
+                print_table(retsult)
         elif choice == '8':
             print_tables()
         elif choice == '9':
