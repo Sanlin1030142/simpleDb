@@ -10,6 +10,20 @@
 pip install pandas
 ```
 
+2. 通過git clone 下載整份程式碼
+
+```bash
+git clone https://github.com/Sanlin1030142/simpleDb.git
+```
+
+3. 來到正確的資料夾內 /simpleDb 執行主程式
+
+```bash
+python -u database.py
+```
+
+
+
 
 ## 功能
 - 執行六個小指令 select, project, rename, cartesian product, set union, set difference
@@ -22,5 +36,5 @@ pip install pandas
 - 程式會在 /inputtable 裡面找到 majors 跟 students 兩個輸入檔案，使用者**不須做初始載入**(tools.No11)
 - 程式在首次啟動時會輸出可使用的table名稱及內容，以供使用者參考
 - 在每一次執行指令前會輸出指令列表，使用者可以輸入指令號碼選擇功能
-- 程式除了刪除的**所有**輸出表格都會以一個新的表格呈現，不會動到原始資料
+- 程式除了刪除的**所有**輸出表格都會以一個新的表格存下，並輸出到terminal，不會動到原始資料
 - 其他的注意事項會在使用過程中做出提示，請安心使用
