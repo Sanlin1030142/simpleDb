@@ -16,7 +16,14 @@ pip install pandas
 git clone https://github.com/Sanlin1030142/simpleDb.git
 ```
 
-3. 來到正確的資料夾內 /simpleDb 執行主程式
+3. 來到正確的資料夾內 /simpleDb 
+
+```bash
+cd **/**/simpleDb
+```
+
+
+4. 執行主程式
 
 ```bash
 python -u database.py
